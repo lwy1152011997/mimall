@@ -11,5 +11,4 @@
   安装 vue create mimall
   运行 yarn serve
 
-### 跨域的解决方案
- - 
+  也可以用vue ui 来创建项目
