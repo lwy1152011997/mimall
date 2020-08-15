@@ -1,0 +1,18 @@
+/*
+$hov水平 $col垂直, $用来定义变量
+@mixin 用来定义 回合函数
+使用这个函数用 @include middleflex() 来调用
+*/
+@mixin middleflex($hov: space-between, $col: center) {
+  display: flex;
+  justify-content: $hov;
+  align-items: $col;
+}
+
+@mixin bgImg($w: 0, $h: 0, $url: '', $size: contain) {
+  display: inline-block;
+  width: $w;
+  height: $h;
+  background: url($url) no-repeat center;
+  background-size: $size;
+}

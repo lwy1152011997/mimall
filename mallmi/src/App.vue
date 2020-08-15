@@ -8,12 +8,20 @@
 
 export default {
   name: 'App',
+  data() {
+    return {
+
+    }
+  },
   components: {
     
+  },
+  mounted() {
+
   }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import './assets/scss/reset';
 </style>

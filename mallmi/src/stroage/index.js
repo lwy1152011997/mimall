@@ -20,6 +20,7 @@ export default {
       window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(_val));
     }
   },
+
   // 获取值
   getItem(key, module_name) {
     if (module_name) {
@@ -28,14 +29,17 @@ export default {
     }
     return this.getStroage()[key];
   },
+
   // 获取session内的指定key下的全部数据
   getStroage() {
     return JSON.parse(window.sessionStorage.getItem(STORAGE_KEY) || '{}');
   },
+
   // 清空某一个数据
   clear(key, module_name) {
     let _val = this.getStroage();
     if (module_name) {
+      if (!_val[module_name]) return;
       delete _val[module_name][key];
     } else {
       delete _val[key];
